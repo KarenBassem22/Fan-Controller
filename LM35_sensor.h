@@ -1,22 +1,26 @@
-/*
- * Author: Karen Bassem Thabet
- * File Name: LM35_sensor.h
- * Description: Header file for LM35 sensor
- * Module: LM35 sensor
- */
-
-
+/******************************************************************************
+ * Module: Temperature LM35 Sensor
+ * File Name: lm35_sensor.h
+ * Description: header file for the LM35 Temperature Sensor driver
+ * Author: Karen Bassem
+ *******************************************************************************/
 #ifndef LM35_SENSOR_H_
 #define LM35_SENSOR_H_
 
 #include "std_types.h"
-#include "ADC_driver.h"
 
-/* DEFINITIONS */
-#define SENSOR_MAX_TEMP 150
-#define SENSOR_MAX_VOLT 1.5
+/*******************************************************************************
+ *                                Definitions                                  *
+ *******************************************************************************/
 
-/* FUNCTION PROTOTYPE */
-uint8 LM35_GetTemperature();
+#define SENSOR_MAX_VOLT     1.5
+#define SENSOR_MAX_TEMP    150
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+
+/* Function to calculate the temperature from the ADC digital value */
+uint8 LM35_getTemperature(void);
 
 #endif /* LM35_SENSOR_H_ */
