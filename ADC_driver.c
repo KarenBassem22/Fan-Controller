@@ -6,9 +6,6 @@
  ******************************************************************************************************************************/
 
 #include "ADC_driver.h"
-
-#include "avr/io.h"
-#include "common_macros.h"
 void ADC_init(const ADC_ConfigType * Config_Ptr){
 
 	ADMUX= (ADMUX & 0x3F) | ((Config_Ptr->ref_volt)<<6);   /* To choose the voltage reference at bit 6&7 as given*/
