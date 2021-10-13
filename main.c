@@ -19,12 +19,12 @@ int main(void){
 	DcMotor_State fan_state;
 	uint8 fan_temp=0;
 	LCD_displayStringRowColumn(0,3,"FAN IS ");
-	LCD_displayStringRowColumn(1,3,"TEMP=   C");
+	LCD_displayStringRowColumn(1,3,"TEMP=     C");
 
 	while(1){
 
 		fan_temp=LM35_getTemperature();       /* assign the digital value calculated to the temperature value */
-		LCD_moveCursor(1,8);
+		LCD_moveCursor(1,9);
 		LCD_integerToString(fan_temp);
 
 		if(fan_temp<30){
