@@ -13,9 +13,16 @@
 #include "std_types.h"
 #include "avr\io.h"
 #include "gpio.h"
-#include "LCD_driver.h"
-#include "ADC_driver.h"
-#include "LM35_sensor.h"
 #include <util\delay.h>
+#include "ADC_driver.h"
+#include "PWM.h"
+#include "DC_motor.h"
+#include "LCD_driver.h"
+#include "LM35_sensor.h"
+
+/* to use to display fan state */
+enum FAN_state{
+	OFF,ON
+};
 
 #endif /* THIRD_MINI_PROJECT_H_ */
